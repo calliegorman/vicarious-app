@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  width: 100%;
+}
+
+.btn-link {
+  background-color: #FF6E5F;
+  border-radius: 15px;
+  color: white;
+  font-weight: bolder;
+  padding:.5rem 1rem .5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 7rem;
+}
+
+.header {
+  background: url("assets/header-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
