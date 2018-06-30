@@ -9,21 +9,20 @@ html {
 }
 
 body {
+  color: #4A4A4A;
   font-family: 'Nunito', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: normal;
   margin: 0;
   width: 100%;
+  z-index: 1;
 }
 
-.btn-link {
-  background-color: #FF6E5F;
-  border-radius: 15px;
-  color: white;
-  font-weight: bolder;
-  padding:.5rem 1rem .5rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  width: 7rem;
+.header.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -31,17 +30,313 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30rem;
-  width: 100%;
+}
+
+.overlay.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box {
+  background-color: #F3F3F3;
+  border-radius: 15px;
+  display: none;
+  margin-top: 12rem;
+  min-height: 40vh;
+  position: fixed;
+  text-align: center;
+  min-width: 50vh;
+  z-index: 2;
+}
+
+.title-overlay {
+  background-color: white;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0 5px 5px -7px #333;
+  color: #00ADCB;
+  font-size: 1.3rem;
+  height: 3rem;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  text-align: center;
+}
+
+.fa.fa-times {
+  float: right;
+  padding-right: 1rem;
+  padding-top: .5rem;
+}
+
+.box-body {
+  justify-content: center;
+  text-align: center;
+}
+
+.app-store {
+  margin: auto;
+  padding-top: 1rem;
+  width: 80%;
+}
+
+.modal-logo {
+  padding-top: 1rem;
+}
+
+.app-store-img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.logo-icon {
+  align-self: flex-start;
+  margin-left: 3rem;
+  margin-top: 2rem;
 }
 
 .header-text {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 10rem;
   text-align: center;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .header-text {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+}
+
+.btnLink {
+  background-color: #FF6E5F;
+  border-radius: 15px;
+  color: white;
+  font-weight: normal;
+  padding:.5rem 3.5rem .5rem 3.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn {
+  margin-top: 2rem;
+}
+
+.intro.container {
+  align-items: center;
+  background: linear-gradient(to right,#FFFFFF, #E0DEDE);
+  display: flex;
+  font-size: 1.1rem;
+  min-height: 40vh;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.introduction {
+  width: 50%;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .intro.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .introduction {
+    width: 60%;
+  }
+}
+
+.app-overview.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  min-height: 90vh;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.vicarious-intro {
+  font-size: 2.2rem;
+}
+
+.bullets {
+  line-height: 1.6;
+}
+
+.numbers {
+  color: #38E1F1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .vicarious-intro {
+    text-align: center;
+  }
+  .iphone-images {
+    max-width: 90%;
+    padding-top: 1rem;
+  }
+
+  .bullets {
+    line-height: 1.3;
+  }
+}
+
+.offerings.container {
+  align-items: center;
+  background: linear-gradient(to right,#E0DEDE, #FFFFFF);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.offering {
+  margin: 2%;
+  text-align: center;
+  width: 20%;
+}
+
+@media only screen and (max-width: 900px) {
+  .offerings.container {
+       flex-direction: column;
+       text-align: center;
+  }
+  .offering {
+    width: 50%;
+  }
+}
+
+.icon-background {
+  color: #38E1F1;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+p {
+  line-height: 1.2;
+  margin-top: 1rem;
+}
+
+.testimonials.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
   width: 100%;
 }
 
-h1 {
-  color: #FFFFFF;
-  font-size: 2.5rem;
-  font-weight: bold;
+.testimonial-quote {
+  font-style: italic;
+  padding-bottom: 2rem;
+  width: 50%;
+}
+
+.quotation {
+  color: #3DE2F2;
+  font-size: 5rem;
+  padding-top: 2rem;
+}
+
+.people {
+  align-self: center;
+  padding-right: 1rem;
+  height: 60px;
+}
+
+.join-us-footer {
+  background: url("assets/footer-background.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.join-us-footer.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  min-height: 70vh;
+}
+
+.community {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.footer {
+  color: white;
+  padding-left: 4rem;
+}
+
+.footer-lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10rem;
+}
+
+.title {
+  color: white;
+  font-size: 1.2rem;
+  font-style: bold;
+  padding-bottom: .5rem;
+}
+
+.small-icon {
+  padding-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .community {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding-top: 1rem;
+  }
+  .footer-lists {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12rem;
+    text-align: center;
+  }
+  .footer {
+    padding: 0;
+  }
+  .title {
+    font-size: 1rem;
+    padding-top: 2rem;
+  }
+  li {
+    line-height: 1.2;
+  }
+  .small-icon {
+    align-self: center;
+    padding-bottom: 2rem;
+  }
 }
