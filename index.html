@@ -17,19 +17,19 @@
 
 <!-- OVERLAY -->
 <div class="overlay container">
-<div class="box">
-  <section class="box-dialogue">
-    <i class="fa fa-times" style="font-size:20px;color:#4A4A4A;" id="closeBtn"></i>
-    <header class="title-overlay">
-      <h3>Download vicarious for free</h3>
-    </header>
-    <section class="box-body">
-      <img src="assets/logo-black.png" alt="Vicarious logo" class="modal-logo">
-      <p class="app-store">Vicarious is currently available for free on the Apple App Store.</p>
-      <img src="assets/download-app-store.png" alt="Download on the Apple App Store" class="app-store-img">
+  <div id="myModal" class="modal">
+    <section class="box-dialogue">
+      <span class="close">&times;</span>
+      <header class="title-overlay">
+        <h3>Download vicarious for free</h3>
+      </header>
+      <section class="box-body">
+        <img src="assets/logo-black.png" alt="Vicarious logo" class="modal-logo">
+        <p class="app-store">Vicarious is currently available for free on the Apple App Store.</p>
+        <img src="assets/download-app-store.png" alt="Download on the Apple App Store" class="app-store-img">
+      </section>
     </section>
-  </section>
-</div>
+  </div>
 </div>
 
   <!-- HEADER -->
@@ -40,7 +40,7 @@
   </section>
     <h1 class="header-text">More time for traveling.
     <br>More peace of mind for family and friends.</h1>
-    <p class="btnLink">Sign up for free</p>
+    <button id="btnLink">Sign up for free</button>
   </div>
 
   <!-- INTRO -->
@@ -110,7 +110,7 @@
     <h1>"</h1>
   </section>
   <section class="testimonial-quote">
-    <p>“My parents were incredibly nervous about the fact I was traveling through Southeast Asia alone for six months. With the help of vicarious, I was able to update them about my whereabouts and how I was feeling on a daily basis, without needing strong wifi for a long period of time for a Facetime call.”</p>
+    <p class="girl-quote">“My parents were incredibly nervous about the fact I was traveling through Southeast Asia alone for six months. With the help of vicarious, I was able to update them about my whereabouts and how I was feeling on a daily basis, without needing strong wifi for a long period of time for a Facetime call.”</p>
   </section>
   <section class="peoples">
     <img src="assets/person-1.png" alt="Photo of person 1" class="people one">
@@ -128,7 +128,7 @@
 
   <div class="join-us-footer container">
     <h2 class="community">Join our community of travelers</h2>
-    <p class="btnLink">Sign up for free</p>
+    <button id="btnLink">Sign up for free</button>
     <section class="footer-lists">
     <ul class="footer">
       <li class="title">About</li>
@@ -159,6 +159,35 @@
 <!--SCRIPTS-->
 
 <script type="text/javascript" src="app.js"></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("btnLink");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 
 </body>
 </html>
